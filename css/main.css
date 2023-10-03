@@ -1041,8 +1041,12 @@ fieldset[disabled] .btn-default.active {
 }
 
 .feature-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-}
+    
+  }
 
 /* Tablet - 2x2 grid */
 /* @media (min-width: 767px) {
