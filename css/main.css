@@ -1006,7 +1006,7 @@ fieldset[disabled] .btn-default.active {
 
 .img-responsive {
     display: block;
-    max-width: 90%;
+    /* max-width: 90%; */
     height: auto;
 }
 
@@ -1018,9 +1018,9 @@ fieldset[disabled] .btn-default.active {
     .about .about-photo {
         padding-bottom: 25px;
     }
-    .img-responsive {
+    /* .img-responsive {
         max-width: 90%;
-    }
+    } */
     .footer-logo {
         margin: 26px 0px 26px;
     }
