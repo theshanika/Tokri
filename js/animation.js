@@ -1,6 +1,6 @@
 //All animation logic is stored in a seprate js file for convenience 
 
-$(window).load(function() {
+$(window).load(function () {
     "use strict";
 
     var fadeOutPreloder = {
@@ -45,6 +45,10 @@ $(window).load(function() {
         p: fadeIn.p,
         o: fadeIn.o
     }, {
+        e: $('.buttons'),
+        p: fadeIn.p,
+        o: fadeIn.o
+    }, {
         e: $('.scroll-down'),
         p: fadeIn.p,
         o: fadeIn.o
@@ -53,12 +57,13 @@ $(window).load(function() {
     $(".logo").css("opacity", "0");
     $(".home h1").css("opacity", "0");
     $(".home h2").css("opacity", "0");
+    $(".buttons").css("opacity", "0");
     $(".scroll-down").css("opacity", "0");
 
-    setTimeout(function() {
+    setTimeout(function () {
         $.Velocity.RunSequence(homeInSequence); //home page loads in
     }, 750);
-    $(".scroll-down a").on('click', function() {
+    $(".scroll-down a").on('click', function () {
         $(".about").velocity("scroll", scroll.o);
     });
 
