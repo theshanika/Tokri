@@ -695,7 +695,7 @@ fieldset[disabled] .btn-default.active {
 }
 
 .footer-address p {
-    color: #bcbcbc;
+    /* color: #bcbcbc; */
     font-size: 17px;
 }
 
@@ -709,9 +709,9 @@ fieldset[disabled] .btn-default.active {
     text-decoration: none;
 }
 
-.footer a:hover {
+/* .footer a:hover {
     color: #999;
-}
+} */
 
 .footer .work-time {
     margin-bottom: 27px;
@@ -727,19 +727,23 @@ fieldset[disabled] .btn-default.active {
 }
 
 .footer .work-time .work-date {
-    font-weight: 700;
+    /* font-weight: 700; */
     font-size: 17px;
     margin-top: -4px !important;
 }
 
-.footer .work-time .work-date:hover {
+/* .footer .work-time .work-date:hover {
     color: #f9c56a;
+} */
+
+.work-date {
+    font-weight: 700;
 }
 
 .footer .work-times {
     font-size: 14px;
-    color: #828281;
-    font-weight: 700;
+    /* color: #828281; */
+    /* font-weight: 700; */
     margin: 0px;
 }
 
@@ -749,6 +753,10 @@ fieldset[disabled] .btn-default.active {
 
 .left .right {
     text-align: right;
+}
+
+.quick-links a:hover {
+    color: #f9c56a;
 }
 
 .footer .footer-social-icons {
@@ -807,6 +815,10 @@ fieldset[disabled] .btn-default.active {
 .footer-row {
     display: block;
     padding-top: 20px;
+}
+
+.footer-photo {
+    max-width: 90%;
 }
 
 /* Tablet - 2x2 grid */
@@ -994,7 +1006,7 @@ fieldset[disabled] .btn-default.active {
 
 .img-responsive {
     display: block;
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
 }
 
@@ -1007,7 +1019,10 @@ fieldset[disabled] .btn-default.active {
         padding-bottom: 25px;
     }
     .img-responsive {
-        max-width: 95%;
+        max-width: 90%;
+    }
+    .footer-logo {
+        margin: 26px 0px 26px;
     }
 }
 
