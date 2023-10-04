@@ -990,7 +990,7 @@ fieldset[disabled] .btn-default.active {
 
 .img-responsive {
     display: block;
-    max-width: 70%;
+    /* max-width: 70%; */
     height: auto;
 }
 
