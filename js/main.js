@@ -10,17 +10,17 @@ Surjith S M / @surjithctly
 
 */
 
-$(function() {
+$(function () {
 
     document.addEventListener("DOMContentLoaded", function () {
         const navbarLinks = document.querySelectorAll(".navbar a");
-        
+
         navbarLinks.forEach((link) => {
             link.addEventListener("click", (event) => {
                 event.preventDefault();
                 const targetId = link.getAttribute("href").substring(1); // Get the target section's ID
                 const targetSection = document.getElementById(targetId);
-                
+
                 if (targetSection) {
                     targetSection.scrollIntoView({ behavior: "smooth" });
                 }
@@ -35,7 +35,7 @@ $(function() {
         Hide Preloader on Click
        ================================================ */
 
-    $('.preloder').on('click', function() {
+    $('.preloder').on('click', function () {
         $(this).fadeOut();
     });
 
@@ -45,13 +45,13 @@ $(function() {
 
     function bindNavbar() {
         if ($(window).width() > 768) {
-            $('.navbar .dropdown').on('mouseover', function() {
+            $('.navbar .dropdown').on('mouseover', function () {
                 $('.dropdown-toggle', this).next('.dropdown-menu').show();
-            }).on('mouseout', function() {
+            }).on('mouseout', function () {
                 $('.dropdown-toggle', this).next('.dropdown-menu').hide();
             });
 
-            $('.dropdown-toggle').on('click', function() {
+            $('.dropdown-toggle').on('click', function () {
                 if ($(this).next('.dropdown-menu').is(':visible')) {
                     window.location = $(this).attr('href');
                 }
@@ -61,9 +61,8 @@ $(function() {
         }
     }
 
-    
 
-    $(window).resize(function() {
+    $(window).resize(function () {
         bindNavbar();
     });
 
@@ -82,12 +81,12 @@ $(function() {
             directionNav: false
         });
 
-        $('.prev').on('click', function() {
+        $('.prev').on('click', function () {
             $('.special-slider').flexslider('prev');
             return false;
         });
 
-        $('.next').on('click', function() {
+        $('.next').on('click', function () {
             $('.special-slider').flexslider('next');
             return false;
         });
@@ -108,7 +107,7 @@ $(function() {
             layoutMode: 'fitRows'
         });
         // filter items on button click
-        $('.menu-tags').on('click', 'span', function() {
+        $('.menu-tags').on('click', 'span', function () {
 
             $('.menu-tags span').removeClass('tagsort-active');
             $(this).toggleClass('tagsort-active');
@@ -128,7 +127,7 @@ $(function() {
             layoutMode: 'fitRows'
         });
         // filter items on button click
-        $('.menu-tags2').on('click', 'span', function() {
+        $('.menu-tags2').on('click', 'span', function () {
 
             $('.menu-tags2 span').removeClass('tagsort2-active');
             $(this).toggleClass('tagsort2-active');
@@ -148,7 +147,7 @@ $(function() {
             layoutMode: 'fitRows'
         });
         // filter items on button click
-        $('.menu-tags3').on('click', 'span', function() {
+        $('.menu-tags3').on('click', 'span', function () {
 
             $('.menu-tags3 span').removeClass('tagsort3-active');
             $(this).toggleClass('tagsort3-active');
@@ -168,7 +167,7 @@ $(function() {
             layoutMode: 'fitRows'
         });
         // filter items on button click
-        $('.menu-tags4').on('click', 'span', function() {
+        $('.menu-tags4').on('click', 'span', function () {
 
             $('.menu-tags4 span').removeClass('tagsort4-active');
             $(this).toggleClass('tagsort4-active');
@@ -188,7 +187,7 @@ $(function() {
             layoutMode: 'masonry'
         });
         // filter items on button click
-        $('.recipie-tags').on('click', 'span', function() {
+        $('.recipie-tags').on('click', 'span', function () {
 
             $('.recipie-tags span').removeClass('recipie-active');
             $(this).toggleClass('recipie-active');
@@ -208,7 +207,7 @@ $(function() {
             layoutMode: 'masonry'
         });
         // filter items on button click
-        $('.blog-tags').on('click', 'span', function() {
+        $('.blog-tags').on('click', 'span', function () {
 
             $('.recipie-tags span').removeClass('blog-active');
             $(this).toggleClass('blog-active');
@@ -391,7 +390,7 @@ $(function() {
             $('#instafeed').spectragram('getUserFeed', {
                 query: ig_user,
                 wrapEachWith: '<span></span>',
-                complete: function() {
+                complete: function () {
                     $("#instafeed").owlCarousel({
                         center: true,
                         loop: true,
@@ -431,9 +430,9 @@ $(function() {
     //timepicker
     if ($('#timepicker').length) {
         $('#timepicker').clockpicker({
-                donetext: 'Done'
-            })
-            .find('input').change(function() {
+            donetext: 'Done'
+        })
+            .find('input').change(function () {
                 // TODO: time changed
                 console.log(this.value);
             });
@@ -473,15 +472,15 @@ $(function() {
     if ($.validator) {
         $.validator.setDefaults({
             ignore: [],
-            highlight: function(element) {
+            highlight: function (element) {
                 $(element).closest('.form-group').addClass('has-error');
             },
-            unhighlight: function(element) {
+            unhighlight: function (element) {
                 $(element).closest('.form-group').removeClass('has-error');
             },
             errorElement: 'small',
             errorClass: 'help-block',
-            errorPlacement: function(error, element) {
+            errorPlacement: function (error, element) {
                 if (element.parent('.input-group').length || element.parent('label').length) {
                     error.insertAfter(element.parent());
                 } else {
@@ -496,13 +495,13 @@ $(function() {
         Open Table
        ================================================ */
 
-    $('.open-table-container').each(function() {
+    $('.open-table-container').each(function () {
         var restaurantID = $(this).attr('data-restaurant-id');
         $(this).find('.OT_hidden[name="RestaurantID"]').attr('value', restaurantID);
     });
 
     if ($.validator) {
-        $("#ism").submit(function(e) {
+        $("#ism").submit(function (e) {
             e.preventDefault();
         }).validate({
             rules: {
@@ -516,7 +515,7 @@ $(function() {
                     required: true
                 }
             },
-            submitHandler: function(form) {
+            submitHandler: function (form) {
                 form.submit();
                 return false;
             }
@@ -570,11 +569,11 @@ $(function() {
        ================================================ */
 
     //Accordion
-    $('#accordion-e1 .collapse').on('shown.bs.collapse', function() {
+    $('#accordion-e1 .collapse').on('shown.bs.collapse', function () {
         $(this).parent().find(".fa-plus").removeClass("fa-plus").addClass("fa-minus");
         $(this).parent().find("h4").addClass("active");
 
-    }).on('hidden.bs.collapse', function() {
+    }).on('hidden.bs.collapse', function () {
         $(this).parent().find(".fa-minus").removeClass("fa-minus").addClass("fa-plus");
         $(this).parent().find("h4").removeClass("active");
     });
@@ -584,22 +583,22 @@ $(function() {
        ================================================ */
 
     // SETTINGS PANEL
-    $('.btn-settings').on('click', function() {
+    $('.btn-settings').on('click', function () {
         $(this).parent().toggleClass('active');
         $("body").toggleClass('boxed-wrap');
     });
-    $('.switch-handle').on('click', function() {
+    $('.switch-handle').on('click', function () {
         $(this).toggleClass('active');
         $('.body').toggleClass('boxed');
     });
-    $('.bg-list div').on('click', function() {
+    $('.bg-list div').on('click', function () {
         if ($(this).hasClass('active')) return false;
         if (!$('.switch-handle').hasClass('active')) $('.switch-handle').trigger('click');
         $(this).addClass('active').siblings().removeClass('active');
         var cl = $(this).attr('class');
         $('body').attr('class', cl);
     });
-    $('.color-list div').on('click', function() {
+    $('.color-list div').on('click', function () {
         if ($(this).hasClass('active')) return false;
         $('link.color-scheme-link').remove();
         $(this).addClass('active').siblings().removeClass('active');
@@ -609,7 +608,7 @@ $(function() {
             .attr('href', src)
             .appendTo('head');
     });
-    $('.reset').on('click', function() {
+    $('.reset').on('click', function () {
         $(".bg-list div").removeClass('active');
         $(".switch-handle").removeClass('active');
         $(".color-list div").removeClass('active');
@@ -622,7 +621,7 @@ $(function() {
             .attr('href', src)
             .appendTo('head');
     });
-    $('.reset span').on('click', function() {
+    $('.reset span').on('click', function () {
         var cl = $(this).attr('class');
         $('body').attr('class', cl);
     });
@@ -631,7 +630,7 @@ $(function() {
        Fixed Navbar
        ================================================ */
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         var value = $(this).scrollTop();
         if (value > 350)
             $(".navbar-fixed-top").css("background", "rgba(0, 0, 0, 0.9)");

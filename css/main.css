@@ -290,7 +290,7 @@ html {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 700;
-    padding: 10px 15px;
+    padding: 2rem 10rem;
 }
 
 .btn-default {
@@ -351,11 +351,12 @@ fieldset[disabled] .btn-default.active {
 /* Navbar */
 
 .navbar {
-    background-color: rgba(0, 0, 0, 0.33);
+    background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
     z-index: 50;
     margin: 0;
     transition: 0.4s;
+    padding-top: 6px;
 }
 
 .navbar-static-top {
@@ -595,16 +596,16 @@ fieldset[disabled] .btn-default.active {
 }
 
 .footer .footer-social-icons a {
-    padding: 9px 0px 6px 0px;
+    padding: 6px 0px 6px 0px;
     margin-right: 10px;
     color: #555;
     background-color: #f9c56a;
     border-radius: 100%;
     width: 35px;
-    height: 38px;
+    height: 35px;
     display: inline-block;
     text-align: center;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 .footer .footer-social-icons a:hover {
@@ -702,7 +703,7 @@ fieldset[disabled] .btn-default.active {
       Nav
       ---- */
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     .navigation {
         display: grid;
         justify-items: center;
@@ -777,7 +778,6 @@ fieldset[disabled] .btn-default.active {
 @media (max-width: 992px) {
     .navigation {
         display: grid;
-        background-color: black;
         text-align: center;
     }
 
@@ -1043,28 +1043,14 @@ fieldset[disabled] .btn-default.active {
     opacity: 0.9;
 }
 
-/* Tablet - 2x2 grid */
-/* @media (min-width: 767px) {
-    .top-row {
-        display: flex;
-    }
-
-    .bottom-row {
-        display: flex;
-    }
-} */
-
-/* Desktop - Flex layout */
-/* @media (min-width: 992px) {
-
-} */
-
-/* menu */
+/* 
+   Menu
+   -------- */
 
 #menu {
     /* padding-top: 75px; */
-    padding-bottom: 50px;
-    background: url("../images/blog/blog-bg.jpg");
+    padding-bottom: 100px;
+    background-color: #fff;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -1079,13 +1065,14 @@ fieldset[disabled] .btn-default.active {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #fff;
     opacity: 0.3;
 }
-#menu.block .heading {
-    color: #fff;
+#menu .block .heading {
+    color: #000;
 }
-
+#menu .block ul {
+    padding-top: 40px;
+}
 #menu .block ul li {
     overflow: hidden;
     width: 50%;
@@ -1117,24 +1104,24 @@ fieldset[disabled] .btn-default.active {
 #menu .block ul li p {
     padding-top: 25px;
 }
-#menu .block ul li .menu-img {
+#menu .block ul li .blog-img {
     float: left;
     width: 50%;
     height: 100%;
-    /* background: red; */
+    background: #fff;
     overflow: hidden;
 }
-#menu .block ul li .menu-img img {
+#menu .block ul li .blog-img img {
     -webkit-transition: all 0.8s ease-out;
     -o-transition: all 0.8s ease-out;
     transition: all 0.8s ease-out;
 }
-#menu .block ul li .menu-img-2 {
+#menu .block ul li .blog-img-2 {
     width: 50%;
     float: right;
     overflow: hidden;
 }
-#menu .block ul li .menu-img-2 img {
+#menu .block ul li .blog-img-2 img {
     -webkit-transition: all 0.8s ease-out;
     -o-transition: all 0.8s ease-out;
     transition: all 0.8s ease-out;
@@ -1159,7 +1146,7 @@ fieldset[disabled] .btn-default.active {
     width: 30px;
     height: 30px;
     margin-top: -15px;
-    /* background: #fff; */
+    background: #fff;
     transform: rotate(45deg);
     margin-left: -15px;
 }
@@ -1169,7 +1156,7 @@ fieldset[disabled] .btn-default.active {
     height: 100%;
     float: left;
     position: relative;
-    /* z-index: 999; */
+    z-index: 999;
 }
 #menu .block ul li .content-left:after {
     content: "";
@@ -1179,17 +1166,18 @@ fieldset[disabled] .btn-default.active {
     width: 30px;
     height: 30px;
     margin-top: 0px;
-    /* background: #fff; */
+    background: #fff;
     transform: rotate(45deg);
 }
 #menu .block .btn-more-info {
+    float: right;
     padding: 28px 102.5px;
     border-radius: 0px;
     background: #f9c56a;
-    color: #000;
+    color: #fff;
     border: 1px solid transparent;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 500;
     font-size: 16px;
     -webkit-transition: 0.3s all;
     -o-transition: 0.3s all;
@@ -1201,56 +1189,30 @@ fieldset[disabled] .btn-default.active {
     border: 1px solid #f9c56a;
 }
 
-.view-menu {
-    margin-block: 4rem;
+ul {
+    padding: 0;
 }
 
-/* Tablet - 2x2 grid */
-@media (max-width: 992px) {
-    .content-right {
-        display: none;
-    }
+.view-menu-btn {
+    text-align: center;
+  }
 
-    .content-left {
-        display: none;
-    }
-
-    .menu-img-2 {
-        display: none;
-    }
-
-    #menu .block ul li .menu-img {
-        float: left;
-        width: 100%;
-        height: 100%;
-        /* background: red; */
-        overflow: hidden;
-    }
-
-    ul {
-        padding: 0;
+@media (max-width: 767px) {
+    #menu .block .btn-more-info {
+        display: grid;
+        padding-left: auto;
     }
 }
 
 @media (max-width: 767px) {
-    #menu .block ul li .menu-img {
-        float: left;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-    #menu .block ul li {
-        overflow: hidden;
-        width: 100%;
-        float: left;
-    }
-    .block {
-        display: grid;
-        justify-content: space-evenly;
+    .hide-on-mobile {
+        display: none;
     }
 }
 
-/* Chefs  */
+/* 
+   Chefs
+   -------- */
 
 .chefs {
     background: url(../img/chefs_bg.png) no-repeat center center;
@@ -1307,10 +1269,6 @@ fieldset[disabled] .btn-default.active {
     text-align: center;
 }
 
-.chefs .chef-member .social a:hover {
-    color: rgba(55, 55, 63, 0.9);
-}
-
 .chefs .chef-member .social i {
     font-size: 18px;
 }
@@ -1339,16 +1297,6 @@ fieldset[disabled] .btn-default.active {
     padding-top: 15px;
     line-height: 26px;
     color: #000;
-}
-
-.chefs .chef-member:hover {
-    transform: scale(1.08);
-    box-shadow: 0px 0 30px rgba(55, 55, 63, 0.15);
-}
-
-.chefs .chef-member:hover .social {
-    right: 8px;
-    opacity: 1;
 }
 
 .chef-card {
@@ -1440,7 +1388,9 @@ fieldset[disabled] .btn-default.active {
     outline: none !important;
 }
 
-/* Page Header */
+/* 
+   Page Header
+   -------- */
 
 .page_header {
     background: url(../img/header/1.jpg) no-repeat center top;
@@ -1464,7 +1414,9 @@ fieldset[disabled] .btn-default.active {
     opacity: 0.7;
 }
 
-/* Services list */
+/* 
+   Services
+   -------- */
 
 .services {
     background: #1b1e20 url(../img/services.jpg) no-repeat center top;
@@ -2025,7 +1977,9 @@ table {
     float: right;
 }
 
-/* Products */
+/* 
+   Product
+   -------- */
 
 .product-img {
     background: url(../img/xtra/product-bg.png) no-repeat;
@@ -2842,7 +2796,9 @@ textarea {
     background: #fff;
 }
 
-/* Intro */
+/* 
+   Intro
+   -------- */
 
 #intro3 .home .overlay {
     background: url(../js/vendor/vegas/overlays/08.png);
@@ -2926,7 +2882,9 @@ textarea {
     margin-top: -1px;
 }
 
-/* Style Switcher */
+/* 
+   Style Switcher
+   -------- */
 
 .body {
     width: 100%;
