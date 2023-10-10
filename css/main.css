@@ -955,6 +955,10 @@ fieldset[disabled] .btn-default.active {
     .about .accordion-list {
         padding-bottom: 30px;
     }
+
+    .about-us {
+        margin-top: 3rem;
+    }
 }
 
 @keyframes pulsate-btn {
