@@ -351,12 +351,11 @@ fieldset[disabled] .btn-default.active {
 /* Navbar */
 
 .navbar {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
     color: #fff;
     z-index: 50;
     margin: 0;
     transition: 0.4s;
-    padding-top: 6px;
 }
 
 .navbar-static-top {
@@ -399,8 +398,13 @@ fieldset[disabled] .btn-default.active {
     margin-right: 5px;
 }
 
-.navbar .navbar-toggle .icon-bar {
-    background-color: #fff;
+.navbar-default {
+    border: none;
+    display: grid;
+}
+
+.navbar-toggle :hover :focus {
+    background-color: transparent;
 }
 
 .nav .open > a,
@@ -412,6 +416,49 @@ fieldset[disabled] .btn-default.active {
 .nav .open > a:focus {
     background-color: inherit !important;
 }
+
+.navbar-default .navbar-toggle {
+    border: none;
+}
+
+.navbar .navbar-toggle:hover, .navbar .navbar-toggle:focus {
+    background-color: transparent;
+}
+.navbar .navbar-toggle.collapsed .icon-bar {
+    background-color: #fff;
+}
+.navbar .navbar-toggle.collapsed .icon-bar:nth-of-type(1) {
+    transform: rotate(0deg);
+    top: 0;
+}
+.navbar .navbar-toggle.collapsed .icon-bar:nth-of-type(2) {
+    opacity: 1;
+    width: 100%;
+    margin-left: 0;
+}
+.navbar .navbar-toggle.collapsed .icon-bar:nth-of-type(3) {
+    transform: rotate(0deg);
+    bottom: 0;
+}
+.navbar .navbar-toggle .icon-bar {
+    position: relative;
+    transition: all 500ms ease-in-out;
+    background-color: orangered;
+}
+.navbar .navbar-toggle .icon-bar:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 6px;
+}
+.navbar .navbar-toggle .icon-bar:nth-of-type(2) {
+    opacity: 0;
+    width: 0;
+    margin-left: 50%;
+}
+.navbar .navbar-toggle .icon-bar:nth-of-type(3) {
+    transform: rotate(-45deg);
+    bottom: 6px;
+}
+
 
 /* Dropdown Menu */
 
@@ -1199,7 +1246,7 @@ ul {
 
 .view-menu-btn {
     text-align: center;
-  }
+}
 
 @media (max-width: 767px) {
     #menu .block .btn-more-info {
