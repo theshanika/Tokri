@@ -713,20 +713,11 @@ fieldset[disabled] .btn-default.active {
     max-width: 90%;
 }
 
-/* Tablet - 2x2 grid */
-@media (min-width: 767px) {
-    .footer-row {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 1rem;
-    }
-}
-
-/* Desktop - Flex layout */
-@media (min-width: 992px) {
-    .footer-row {
+@media (max-width: 992px) {
+    .footer-section {
         display: flex;
-        justify-content: space-evenly;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
 
