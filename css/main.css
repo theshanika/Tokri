@@ -774,63 +774,70 @@ fieldset[disabled] .btn-default.active {
 
 .home {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
-    background: url(../img/web_hero.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
 
-.home-content {
-    display: grid;
-    grid-template-rows: auto min-content min-content;
+.home-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.carousel {
     height: 100%;
-    justify-items: center;
-    align-items: end;
-    /* padding-top: 10%; */
 }
 
-.logo img {
-    height: 200px;
+.carousel-inner {
+    height: 100%;
+    min-height: 100%;
+}
+
+.item-image {
+    height: 100vh !important;
+    object-fit: cover;
+}
+
+.carousel-content {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: grid;
+    justify-items: center;
+    gap: 5rem;
+    width: 60%;
 }
 
 .logo {
-    margin-bottom: 4%;
-}
-
-.title-block {
     display: grid;
+    justify-items: center;
 }
 
-.title-block .logo {
-    text-align: center;
+.logo img {
+    height: 20rem;
 }
 
 .title-block h1 {
     color: #ffffff;
-    font-size: 72px;
+    font-size: 6rem;
 }
 
 .title-block h2 {
     text-transform: none;
     font-weight: 400;
     color: #e6e6e6;
-    font-size: 36px;
+    font-size: 4rem;
 }
 
 .buttons {
-    padding: 36px;
     display: flex;
 }
 
 .home-btn {
     margin: 4px;
-}
-
-.scroll-down {
-    padding: 24px;
 }
 
 @media (max-width: 992px) {
@@ -849,17 +856,18 @@ fieldset[disabled] .btn-default.active {
         padding-top: 10%;
     }
     .home .title-block h1 {
-        font-size: 42px;
+        font-size: 4rem;
     }
     .home .title-block h2 {
-        font-size: 24px;
+        font-size: 2rem;
     }
     .buttons {
         display: grid;
-        padding: 32px;
+        padding-inline: 2rem;
+        padding-block: 0;
     }
     .logo img {
-        height: 120px;
+        height: 10rem;
     }
     .logo {
         margin-bottom: 0;
