@@ -808,7 +808,7 @@ fieldset[disabled] .btn-default.active {
     display: grid;
     justify-items: center;
     gap: 5rem;
-    width: 60%;
+    /* width: 60%; */
 }
 
 .logo {
