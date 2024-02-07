@@ -1299,6 +1299,10 @@ ul {
     padding-bottom: 50px;
 }
 
+.chef-member {
+    display: flex;
+}
+
 .chefs .chef-member {
     overflow: hidden;
     text-align: center;
@@ -1310,7 +1314,7 @@ ul {
 
 .chefs .chef-member .member-img {
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     background-color: #f9c56a;
 }
 
