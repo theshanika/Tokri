@@ -2316,6 +2316,9 @@ table {
     .rc-info {
         margin-bottom: 30px;
     }
+    .chef-member {
+        flex-direction: column;
+    }
 }
 
 /* For Screens less than 767px */
